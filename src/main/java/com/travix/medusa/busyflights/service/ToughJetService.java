@@ -3,6 +3,7 @@ package com.travix.medusa.busyflights.service;
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetRequest;
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetResponse;
 import com.travix.medusa.busyflights.util.Airlines;
+import com.travix.medusa.busyflights.util.ToughJetDataBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,37 +17,7 @@ import java.util.stream.Collectors;
 @Service
 public class ToughJetService {
 
-    List<ToughJetResponse> rsp = new ArrayList<>();
-    public ToughJetService(){
-        ToughJetResponse rs = new ToughJetResponse();
-        rs.setCarrier(Airlines.TOUGH_JET);
-        rs.setBasePrice(10.0);
-        rs.setDiscount(0);
-        rs.setTax(0.0);
-        rs.setDepartureAirportName(Airlines.AIRPORT_CODE_AMS);
-        rs.setArrivalAirportName(Airlines.AIRPORT_CODE_LHR);
-        rs.setOutboundDateTime(Airlines.DEPARTURE_DATE_17);
-        rs.setInboundDateTime(Airlines.ARRIVAL_DATE_18);
-
-        rsp.add(rs);
-
-        rs = new ToughJetResponse();
-        rs.setCarrier(Airlines.TOUGH_JET);
-        rs.setBasePrice(20.0);
-        rs.setDiscount(0);
-        rs.setTax(0.0);
-        rs.setDepartureAirportName(Airlines.AIRPORT_CODE_AMS);
-        rs.setArrivalAirportName(Airlines.AIRPORT_CODE_LHR);
-        rs.setOutboundDateTime(Airlines.DEPARTURE_DATE_18);
-        rs.setInboundDateTime(Airlines.ARRIVAL_DATE_19);
-
-        rsp.add(rs);
-
-        rsp.add(rs);
-
-    }
-
-        public List<ToughJetResponse> getToughJetFlights(ToughJetRequest toughJetRequest){
+        public List<ToughJetResponse> getToughJetFlights(ToughJetRequest toughJetRequest,List<ToughJetResponse> rsp ){
 
         // TODO toughJetRequest.getInboundDate().equals(it.getInboundDateTime())) - can't be compred directly without conversion to one format
             //TODO number of passanger are nor included to the logcic yet

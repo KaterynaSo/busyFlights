@@ -18,32 +18,7 @@ import static com.travix.medusa.busyflights.util.Airlines.*;
 public class CrazyAirService {
 
 
-
-
-    List<CrazyAirResponse> rsp = new ArrayList<>();
-    public CrazyAirService(){
-        CrazyAirResponse crazyAirResponse = new CrazyAirResponse();
-        crazyAirResponse.setAirline(CRAZY_AIR);
-        crazyAirResponse.setPrice(PRICE_122_1);
-        crazyAirResponse.setDepartureAirportCode(AIRPORT_CODE_AMS);
-        crazyAirResponse.setDestinationAirportCode(AIRPORT_CODE_LHR);
-        crazyAirResponse.setDepartureDate(DEPARTURE_DATE_17);
-        crazyAirResponse.setArrivalDate(ARRIVAL_DATE_18);
-
-        rsp.add(crazyAirResponse);
-
-        crazyAirResponse = new CrazyAirResponse();
-        crazyAirResponse.setAirline(CRAZY_AIR);
-        crazyAirResponse.setPrice(PRICE_60_1);
-        crazyAirResponse.setDepartureAirportCode(AIRPORT_CODE_AMS);
-        crazyAirResponse.setDestinationAirportCode(AIRPORT_CODE_LHR);
-        crazyAirResponse.setDepartureDate(DEPARTURE_DATE_18);
-        crazyAirResponse.setArrivalDate(ARRIVAL_DATE_19);
-        rsp.add(crazyAirResponse);
-
-    }
-
-    public List<CrazyAirResponse> getCrazyAirFlights(CrazyAirRequest crazyAirRequest){
+    public List<CrazyAirResponse> getCrazyAirFlights(CrazyAirRequest crazyAirRequest,List<CrazyAirResponse>  rsp ){
 
         List<CrazyAirResponse>  lst =  rsp.stream()
                 .filter(it -> crazyAirRequest.getOrigin().equals(it.getDepartureAirportCode()))

@@ -3,6 +3,7 @@ package com.travix.medusa.busyflights.controller;
 import com.travix.medusa.busyflights.domain.crazyair.CrazyAirRequest;
 import com.travix.medusa.busyflights.domain.crazyair.CrazyAirResponse;
 import com.travix.medusa.busyflights.service.CrazyAirService;
+import com.travix.medusa.busyflights.util.CrazyAirDataBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,8 @@ public class CrazyAirController {
     @RequestMapping(value = "/getflight", method = RequestMethod.GET)
     public ResponseEntity<List<CrazyAirResponse>> getCrazyAirFlights(@Valid CrazyAirRequest crazyAirRequest ){
         crazyAirRequest.getDestination();
-        List<CrazyAirResponse> rsp = crazyAirService.getCrazyAirFlights(crazyAirRequest);
+        //TODO CrazyAirDataBuilder.crazyAirData()- temp solution
+        List<CrazyAirResponse> rsp = crazyAirService.getCrazyAirFlights(crazyAirRequest, CrazyAirDataBuilder.crazyAirData());
         return new ResponseEntity<List<CrazyAirResponse>>(rsp, HttpStatus.OK);
     }
 

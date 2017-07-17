@@ -26,15 +26,6 @@ public class BusyFlightsController {
     @Inject
     BusyFlightsService busyFlightsService;
 
-    @RequestMapping("/all")
-    public Hashtable<String, BusyFlightsResponse> getAll(){
-        return busyFlightsService.getAll();
-    }
-
-    @RequestMapping("{id}")
-    public BusyFlightsResponse getBusyFlight(@PathVariable("id") String id){
-        return busyFlightsService.getBusyFlight(id);
-    }
 
     @RequestMapping(value = "/getagg", method = RequestMethod.GET)
     public ResponseEntity<List<BusyFlightsResponse>> getCrazyAirFlights(@Valid BusyFlightsRequest busyFlightsRequest ){

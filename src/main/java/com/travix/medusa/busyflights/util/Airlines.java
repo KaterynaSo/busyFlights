@@ -9,7 +9,7 @@ public interface Airlines {
     public static final String TOUGH_JET = "ToughJet";
 
     public static final String AIRPORT_CODE_AMS = "AMS";
-    public static final String AIRPORT_CODE_LHR = "LHR";
+        public static final String AIRPORT_CODE_LHR = "LHR";
 
     public static final double PRICE_122_1 = 122.1;
     public static final double PRICE_60_1 = 60.1;
