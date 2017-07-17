@@ -1,12 +1,14 @@
 package com.travix.medusa.busyflights.domain.toughjet;
 
-public class ToughJetRequest {
+import com.travix.medusa.busyflights.domain.Request;
+
+public class ToughJetRequest implements Request {
 
     private String from;
     private String to;
     private String outboundDate;
     private String inboundDate;
-    private int numberOfAdults;
+    private int    numberOfAdults;
 
     public String getFrom() {
         return from;
