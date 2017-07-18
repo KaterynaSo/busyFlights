@@ -2,12 +2,8 @@ package com.travix.medusa.busyflights.service;
 
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetRequest;
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetResponse;
-import com.travix.medusa.busyflights.util.Airlines;
-import com.travix.medusa.busyflights.util.ToughJetDataBuilder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.stream.Collectors;
 

@@ -1,10 +1,9 @@
 package com.travix.medusa.busyflights.domain.busyflights;
 
-import com.travix.medusa.busyflights.domain.Response;
 
 import java.time.LocalDate;
 
-public class BusyFlightsResponse implements Response {
+public class BusyFlightsResponse {
     private String airline;
     private String supplier;
     private Double fare;

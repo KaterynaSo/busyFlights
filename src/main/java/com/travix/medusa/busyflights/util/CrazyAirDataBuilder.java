@@ -5,9 +5,9 @@ import com.travix.medusa.busyflights.domain.crazyair.CrazyAirResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.travix.medusa.busyflights.util.Airlines.*;
-import static com.travix.medusa.busyflights.util.Airlines.ARRIVAL_DATE_19;
-import static com.travix.medusa.busyflights.util.Airlines.DEPARTURE_DATE_18;
+import static com.travix.medusa.busyflights.util.AirlinesStaticData.*;
+import static com.travix.medusa.busyflights.util.AirlinesStaticData.ARRIVAL_DATE_19;
+import static com.travix.medusa.busyflights.util.AirlinesStaticData.DEPARTURE_DATE_18;
 
 /**
  * Created by kateryna.sosonna on 7/17/2017.
@@ -19,8 +19,8 @@ public class CrazyAirDataBuilder {
         CrazyAirResponse crazyAirResponse = new CrazyAirResponse();
         crazyAirResponse.setAirline(CRAZY_AIR);
         crazyAirResponse.setPrice(PRICE_122_1);
-        crazyAirResponse.setDepartureAirportCode(AIRPORT_CODE_LHR);
-        crazyAirResponse.setDestinationAirportCode(AIRPORT_CODE_AMS);
+        crazyAirResponse.setDepartureAirportCode(AIRPORT_CODE_AMS);
+        crazyAirResponse.setDestinationAirportCode(AIRPORT_CODE_LHR);
         crazyAirResponse.setDepartureDate(DEPARTURE_DATE_17);
         crazyAirResponse.setArrivalDate(ARRIVAL_DATE_18);
 

@@ -21,6 +21,13 @@ public class RequestConverter {
         return toughJetRequest;
     }
 
+    public static String convertBusyFlightsToToughJetString(BusyFlightsRequest busyFlightsRequest){
+        // TODO works in case of all parameters - need to be fixed to work only with opulated fields
+        return "?from="+busyFlightsRequest.getOrigin()+"&to="+busyFlightsRequest.getDestination()+
+                "&outboundDate=" + busyFlightsRequest.getDepartureDate() +
+                "&inboundDate=" + busyFlightsRequest.getReturnDate() +
+                "&numberOfAdults=" + busyFlightsRequest.getNumberOfPassengers();
+    }
 
     public static CrazyAirRequest convertBusyFlightsToCrazyAir(BusyFlightsRequest busyFlightsRequest){
         CrazyAirRequest crazyAirRequest = new CrazyAirRequest();
@@ -32,4 +39,14 @@ public class RequestConverter {
 
         return crazyAirRequest;
     }
+
+    public static String  convertBusyFlightsToCrazyAirString(BusyFlightsRequest busyFlightsRequest){
+        // TODO works in case of all parameters - need to be fixed to work only with opulated fields
+        return "?origin=" + busyFlightsRequest.getOrigin() + "&destination="+busyFlightsRequest.getDestination() +
+                "&departureDate=" + busyFlightsRequest.getDepartureDate() +
+                "&returnDate=" + busyFlightsRequest.getReturnDate() +
+                "&passengerCount=" + busyFlightsRequest.getNumberOfPassengers();
+
+    }
+
 }

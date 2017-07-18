@@ -14,7 +14,7 @@ public class ResponseConverter {
     public static BusyFlightsResponse crazyAirToBusyFlights(CrazyAirResponse crazyAirResponse) {
         BusyFlightsResponse bf = new BusyFlightsResponse();
         bf.setAirline(crazyAirResponse.getAirline());
-        bf.setSupplier(Airlines.CRAZY_AIR);
+        bf.setSupplier(AirlinesStaticData.CRAZY_AIR);
         bf.setFare(crazyAirResponse.getPrice());
         bf.setDepartureAirportCode(crazyAirResponse.getDepartureAirportCode());
         bf.setDestinationAirportCode(crazyAirResponse.getDestinationAirportCode());
@@ -28,7 +28,7 @@ public class ResponseConverter {
     public static BusyFlightsResponse toughAirToBusyFlights(ToughJetResponse toughJetResponse) {
         BusyFlightsResponse bf = new BusyFlightsResponse();
         bf.setAirline(toughJetResponse.getCarrier());
-        bf.setSupplier(Airlines.TOUGH_JET);
+        bf.setSupplier(AirlinesStaticData.TOUGH_JET);
         bf.setFare(toughJetResponse.getBasePrice() + toughJetResponse.getTax() - toughJetResponse.getDiscount());
         bf.setDepartureAirportCode(toughJetResponse.getDepartureAirportName());
         bf.setDestinationAirportCode(toughJetResponse.getArrivalAirportName());

@@ -1,8 +1,7 @@
 package com.travix.medusa.busyflights.domain.toughjet;
 
-import com.travix.medusa.busyflights.domain.Response;
 
-public class ToughJetResponse implements Response{
+public class ToughJetResponse{
 
     private String carrier;
     private double basePrice;

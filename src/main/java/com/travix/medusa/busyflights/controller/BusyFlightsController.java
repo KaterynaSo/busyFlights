@@ -27,7 +27,7 @@ public class BusyFlightsController {
     BusyFlightsService busyFlightsService;
 
 
-    @RequestMapping(value = "/getagg", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     public ResponseEntity<List<BusyFlightsResponse>> getCrazyAirFlights(@Valid BusyFlightsRequest busyFlightsRequest ){
         List<BusyFlightsResponse> rsp = busyFlightsService.getAggregatedData(busyFlightsRequest);
         return new ResponseEntity<List<BusyFlightsResponse>>(rsp, HttpStatus.OK);

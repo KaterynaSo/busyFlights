@@ -24,7 +24,7 @@ public class ToughJetController {
     @Inject
     ToughJetService toughJetService;
 
-    @RequestMapping(value = "/getflight", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     public ResponseEntity<List<ToughJetResponse>> getCrazyAirFlights(@Valid ToughJetRequest toughJetRequest ){
         toughJetRequest.getInboundDate();
         //TODO ToughJetDataBuilder.toughJetData()- temp solution

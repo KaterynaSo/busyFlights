@@ -26,7 +26,7 @@ public class CrazyAirController {
     CrazyAirService crazyAirService;
 
 
-    @RequestMapping(value = "/getflight", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     public ResponseEntity<List<CrazyAirResponse>> getCrazyAirFlights(@Valid CrazyAirRequest crazyAirRequest ){
         crazyAirRequest.getDestination();
         //TODO CrazyAirDataBuilder.crazyAirData()- temp solution

@@ -3,7 +3,12 @@ package com.travix.medusa.busyflights.util;
 /**
  * Created by kateryna.sosonna on 7/17/2017.
  */
-public interface Airlines {
+public interface AirlinesStaticData {
+
+    //TODO all thisdata should parametriseid or used some data source, database, for instance
+
+    public static final String HTTP_LOCALHOST_8080_CRAZY_AIR_GETFLIGHT = "http://localhost:8080/crazy-air/getAll";
+    public static final String HTTP_LOCALHOST_8080_TOUGH_JET_GETFLIGHT = "http://localhost:8080/tough-jet/getAll";
 
     public static final String CRAZY_AIR = "CrazyAir";
     public static final String TOUGH_JET = "ToughJet";

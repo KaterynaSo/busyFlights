@@ -1,8 +1,7 @@
 package com.travix.medusa.busyflights.domain.crazyair;
 
-import com.travix.medusa.busyflights.domain.Request;
 
-public class CrazyAirRequest implements Request {
+public class CrazyAirRequest {
 
     private String origin;
     private String destination;
